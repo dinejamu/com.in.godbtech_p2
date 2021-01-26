@@ -7,8 +7,6 @@ T2 will be executed every 5 minutes and Read from the Q1 and insert it into the 
 
 */
 
-
-
 package HomeClass;
 
 import java.sql.*;
@@ -37,7 +35,7 @@ public class TimeStamping {
 				try {
 					timeStamps.add(java.time.LocalTime.now().toString());
 					System.out.println(timeStamps);
-					Thread.sleep(1000);
+					Thread.sleep(60000);
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
@@ -69,7 +67,7 @@ public class TimeStamping {
 							else
 								System.out.println("Try again");
 							con.close();
-							Thread.sleep(5000);
+							Thread.sleep(5*60000);
 						} catch (Exception e) {
 							System.out.println(e.getMessage());
 						}
